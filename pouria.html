@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پوریا صادقی - عادت‌های افراد موفق</title>
+    <style>
+        @import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: 'Vazir', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation 2s forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            direction: rtl;
+        }
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .link-box {
+            width: 300px;
+            height: 100px;
+            background-color: #FFD700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #000;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgb(255, 0, 0), 0 0 30px rgb(0, 255, 0), 0 0 45px rgb(0, 0, 255);
+            cursor: pointer;
+        }
+
+        .link-box:hover {
+            box-shadow: 0 0 25px rgb(0, 255, 0), 0 0 45px rgb(255, 0, 0), 0 0 65px rgb(0, 0, 255);
+        }
+    </style>
+</head>
+<body onload="fadeInElements()">
+    <h1 class="fade-in">پوریا صادقی
+    </h1>
+    
+    <div class="link-container fade-in">
+        <a href="https://youtu.be/SrQg_ARbnG4?si=oqAg66huCuFE7M5c" target="_blank" class="link-box">عادت‌های جسمی افراد موفق</a>
+        <a href="https://youtu.be/zvX7VU4urwk?si=n7B0uGUKxXuVPuOF" target="_blank" class="link-box">عادت‌های ذهنی افراد موفق</a>
+        <a href="https://youtu.be/xvSALNWez3A?si=CLgHtA5U313mE1Zy" target="_blank" class="link-box">پولدار شدن تو جوونی</a>
+    </div>
+
+    <script>
+        function fadeInElements() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.5}s`;
+            });
+        }
+    </script>
+</body>
+</html>
